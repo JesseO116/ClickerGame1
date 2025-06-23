@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cwg5lbj6hs2ki" path="res://scenes/proto/clicker/proto_clicker.gd" id="1_3cxbl"]
 
-[node name="ProtoClicker" type="Control"]
+[node name="ProtoClicker" type="Control" node_paths=PackedStringArray("label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,6 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3cxbl")
+label = NodePath("Label")
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(0, 80)
@@ -19,7 +20,7 @@ anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_type_variation = &"HeaderMedium"
-text = "Total Clicks: <value>"
+text = "Pets: <value>"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -38,3 +39,5 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Click Me"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
