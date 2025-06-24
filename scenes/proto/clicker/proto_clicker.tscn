@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxkffotvprdc1"]
+[gd_scene load_steps=3 format=3 uid="uid://bxkffotvprdc1"]
 
 [ext_resource type="Script" uid="uid://cwg5lbj6hs2ki" path="res://scenes/proto/clicker/proto_clicker.gd" id="1_3cxbl"]
+[ext_resource type="Texture2D" uid="uid://dppqpn4norufx" path="res://game-images/cat_opened_square.png" id="2_ovewy"]
 
-[node name="ProtoClicker" type="Control"]
+[node name="ProtoClicker" type="Control" node_paths=PackedStringArray("label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3cxbl")
+label = NodePath("Label")
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(0, 80)
@@ -19,12 +21,12 @@ anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_type_variation = &"HeaderMedium"
-text = "Total Clicks: <value>"
+text = "Pets: <value>"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-custom_minimum_size = Vector2(320, 80)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,4 +39,9 @@ offset_right = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Click Me"
+icon = ExtResource("2_ovewy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

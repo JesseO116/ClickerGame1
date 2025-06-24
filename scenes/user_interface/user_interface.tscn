@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=3 uid="uid://citfg7tskl88c"]
+
+[ext_resource type="PackedScene" uid="uid://bxkffotvprdc1" path="res://scenes/proto/clicker/proto_clicker.tscn" id="1_yqwyh"]
+
+[node name="UserInterface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainView" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 550)
+layout_mode = 2
+
+[node name="ProtoClicker" parent="VBoxContainer/MainView" instance=ExtResource("1_yqwyh")]
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="BottomPanel" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Upgrades" type="Control" parent="VBoxContainer/BottomPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/BottomPanel/HBoxContainer/Upgrades"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/HBoxContainer/Upgrades/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GenPetsLink" type="LinkButton" parent="VBoxContainer/BottomPanel/HBoxContainer/Upgrades/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Generate Pets"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/BottomPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/BottomPanel/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Shop" type="Control" parent="VBoxContainer/BottomPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/BottomPanel/HBoxContainer/Shop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/HBoxContainer/Shop/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ShopLink" type="LinkButton" parent="VBoxContainer/BottomPanel/HBoxContainer/Shop/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Shop"
