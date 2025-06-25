@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvxjr3jv662gu"
-path="res://.godot/imported/cat_opened_square.png-88cdcff56ab08d8d86ddb12b972c47ff.ctex"
+uid="uid://foi10vvy03ht"
+path="res://.godot/imported/BuyButton.png-78f2b29a3b648c49d3c0670049d6e2da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/buttons/Cats/cat_opened_square.png"
-dest_files=["res://.godot/imported/cat_opened_square.png-88cdcff56ab08d8d86ddb12b972c47ff.ctex"]
+source_file="res://images/buttons/Home/BuyButton.png"
+dest_files=["res://.godot/imported/BuyButton.png-78f2b29a3b648c49d3c0670049d6e2da.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvxjr3jv662gu"
-path="res://.godot/imported/cat_opened_square.png-88cdcff56ab08d8d86ddb12b972c47ff.ctex"
+uid="uid://cq2y38th2wl4j"
+path="res://.godot/imported/HomeButton.png-86e389499ee041283db3379ac2fd2e0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/buttons/Cats/cat_opened_square.png"
-dest_files=["res://.godot/imported/cat_opened_square.png-88cdcff56ab08d8d86ddb12b972c47ff.ctex"]
+source_file="res://images/buttons/Home/HomeButton.png"
+dest_files=["res://.godot/imported/HomeButton.png-86e389499ee041283db3379ac2fd2e0c.ctex"]
 
 [params]
 
