@@ -25,8 +25,9 @@ grow_vertical = 2
 custom_minimum_size = Vector2(0, 550)
 layout_mode = 2
 
-[node name="ProtoClicker" parent="VBoxContainer/MainView" instance=ExtResource("1_yqwyh")]
+[node name="ProtoClicker" parent="VBoxContainer/MainView" node_paths=PackedStringArray("user_interface") instance=ExtResource("1_yqwyh")]
 layout_mode = 1
+user_interface = NodePath("../../..")
 
 [node name="ProtoGenerator" parent="VBoxContainer/MainView" node_paths=PackedStringArray("user_interface") instance=ExtResource("3_2dtu1")]
 visible = false
@@ -106,9 +107,9 @@ theme_override_constants/margin_bottom = 16
 layout_mode = 2
 alignment = 1
 
-[node name="ShopLink" type="LinkButton" parent="VBoxContainer/BottomPanel/HBoxContainer/Shop/MarginContainer/HBoxContainer"]
+[node name="ClickerLink" type="LinkButton" parent="VBoxContainer/BottomPanel/HBoxContainer/Shop/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Shop"
 
 [connection signal="pressed" from="VBoxContainer/BottomPanel/HBoxContainer/Upgrades/MarginContainer/HBoxContainer/GenPetsLink" to="." method="_on_gen_pets_link_pressed"]
-[connection signal="pressed" from="VBoxContainer/BottomPanel/HBoxContainer/Shop/MarginContainer/HBoxContainer/ShopLink" to="." method="_on_shop_link_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPanel/HBoxContainer/Shop/MarginContainer/HBoxContainer/ClickerLink" to="." method="_on_clicker_link_pressed"]

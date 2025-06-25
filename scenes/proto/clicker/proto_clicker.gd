@@ -7,6 +7,9 @@ extends Control
 @export var label : Label
 ## View reference.
 @export var view: UserInterface.Views
+## Refernece to the user interface.
+@export var user_interface: UserInterface
+
 
 ## Current amount of pets.
 var pets : int = 0
@@ -16,7 +19,7 @@ var pets : int = 0
 func _ready() -> void:
 	update_label_text() 
 	
-	visible = false
+	visible = true
 	
 	user_interface.navigation_requested.connect(_on_navigation_request)
 
