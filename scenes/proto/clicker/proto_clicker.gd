@@ -5,6 +5,9 @@ extends Control
 
 ## Reference to the label displaying the current amount of pets.
 @export var label : Label
+## View reference.
+@export var view: UserInterface.Views
+
 ## Current amount of pets.
 var pets : int = 0
 
@@ -12,7 +15,18 @@ var pets : int = 0
 ## Initialize the label at launch.
 func _ready() -> void:
 	update_label_text() 
+	
+	visible = false
+	
+	user_interface.navigation_requested.connect(_on_navigation_request)
 
+## Watch for navigation requests and react accordingly.
+func _on_navigation_request(requested_view: UserInterface.Views) -> void:
+	if requested_view == view:
+		visible = true
+		return
+	
+	visible = false
 
 ## Add 1 pet.
 func create_pets() -> void:

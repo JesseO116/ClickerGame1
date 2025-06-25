@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1c8oehrjfk7a"
-path="res://.godot/imported/ws_Cute_Cat_1920x1200.jpg-dfa7b7176ec8991f99a87c1be74abe2e.ctex"
+uid="uid://ccfass8laoo2t"
+path="res://.godot/imported/cat_opened_square.png-fd28d19b2caf0eeb4bcb10da07c1880a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game-images/ws_Cute_Cat_1920x1200.jpg"
-dest_files=["res://.godot/imported/ws_Cute_Cat_1920x1200.jpg-dfa7b7176ec8991f99a87c1be74abe2e.ctex"]
+source_file="res://images/buttons/cat_opened_square.png"
+dest_files=["res://.godot/imported/cat_opened_square.png-fd28d19b2caf0eeb4bcb10da07c1880a.ctex"]
 
 [params]
 

@@ -9,6 +9,10 @@ extends Control
 @export var button: Button
 ## Reference to the timer. 
 @export var timer: Timer
+## Refernece to the user interface.
+@export var user_interface: UserInterface
+## View reference.
+@export var view: UserInterface.Views
 
 ## Current amount of pets in storage.
 var pets: int = 0
@@ -17,6 +21,10 @@ var pets: int = 0
 ## Initizalize the label
 func _ready() -> void:
 	update_label_text()
+	
+	visible = false
+	
+	user_interface.navigation_requested.connect(_on_navigation_request)
 
 
 ## Creates pets and stores it. 
@@ -28,6 +36,14 @@ func create_pets() -> void:
 ## Update the label text to match the current amount of pets in storage.
 func update_label_text() -> void:
 	label.text = "Pets : %s" %pets
+
+## Watch for navigation requests and react accordingly.
+func _on_navigation_request(requested_view: UserInterface.Views) -> void:
+	if requested_view == view:
+		visible = true
+		return
+	
+	visible = false
 
 
 ## Start the time and disable the button. 

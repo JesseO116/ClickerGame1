@@ -28,10 +28,9 @@ layout_mode = 2
 [node name="ProtoClicker" parent="VBoxContainer/MainView" instance=ExtResource("1_yqwyh")]
 layout_mode = 1
 
-[node name="ProtoGenerator" parent="VBoxContainer/MainView" node_paths=PackedStringArray("user_interface") instance=ExtResource("3_2dtu1")]
+[node name="ProtoGenerator" parent="VBoxContainer/MainView" instance=ExtResource("3_2dtu1")]
 visible = false
 layout_mode = 1
-user_interface = NodePath("../../..")
 view = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
