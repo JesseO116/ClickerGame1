@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf7ugp1mrocuj"
-path="res://.godot/imported/cat_open.png-8f11bee139ae2a99450d69df0f893d32.ctex"
+uid="uid://c4kp4r86ydl7j"
+path="res://.godot/imported/MoneyPressed.png-ac57820bab634edb4c454743d580ed4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/buttons/cat_open.png"
-dest_files=["res://.godot/imported/cat_open.png-8f11bee139ae2a99450d69df0f893d32.ctex"]
+source_file="res://images/buttons/Home/MoneyPressed.png"
+dest_files=["res://.godot/imported/MoneyPressed.png-ac57820bab634edb4c454743d580ed4b.ctex"]
 
 [params]
 
