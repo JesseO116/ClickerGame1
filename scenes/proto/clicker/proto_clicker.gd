@@ -11,10 +11,6 @@ extends Control
 @export var user_interface: UserInterface
 
 
-## Current amount of pets.
-var pets : int = 0
-
-
 ## Initialize the label at launch.
 func _ready() -> void:
 	update_label_text() 
@@ -22,6 +18,11 @@ func _ready() -> void:
 	visible = true
 	
 	user_interface.navigation_requested.connect(_on_navigation_request)
+
+
+## Temporary function to update the label. 
+func _process(_delta: float) -> void:
+	update_label_text()
 
 ## Watch for navigation requests and react accordingly.
 func _on_navigation_request(requested_view: UserInterface.Views) -> void:
@@ -33,13 +34,12 @@ func _on_navigation_request(requested_view: UserInterface.Views) -> void:
 
 ## Add 1 pet.
 func create_pets() -> void:
-	pets += 1
-	update_label_text()
+	Game.ref.data.pets += 1
 
 
 ## Update the text of the label to reflect number of pets.
 func update_label_text() -> void:
-	label.text = "Pets : %s" %pets
+	label.text = "Pets : %s" %Game.ref.data.pets
 
 ## Triggered when the create pets button is pressed. 
 func _on_button_pressed() -> void:

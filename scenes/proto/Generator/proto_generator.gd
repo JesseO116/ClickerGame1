@@ -14,8 +14,6 @@ extends Control
 ## View reference.
 @export var view: UserInterface.Views
 
-## Current amount of pets in storage.
-var pets: int = 0
 
 
 ## Initizalize the label
@@ -27,15 +25,19 @@ func _ready() -> void:
 	user_interface.navigation_requested.connect(_on_navigation_request)
 
 
+## Temporary function to update the label.
+func _process(_delta: float) -> void:
+	update_label_text()
+
+
 ## Creates pets and stores it. 
 func create_pets() -> void:
-	pets += 1
-	update_label_text()
+	Game.ref.data.pets += 1
 
 
 ## Update the label text to match the current amount of pets in storage.
 func update_label_text() -> void:
-	label.text = "Pets : %s" %pets
+	label.text = "Pets : %s" %Game.ref.data.pets
 
 ## Watch for navigation requests and react accordingly.
 func _on_navigation_request(requested_view: UserInterface.Views) -> void:
